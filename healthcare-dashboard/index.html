@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Patient Management Dashboard</h1>
+    <!-- Add Patient Form -->
+    <h2>Add New Patient</h2>
+    <form id="patientForm">
+      <input type="text" id="name" placeholder="Patient Name" required />
+      <input type="number" id="age" placeholder="Age" min="1" required />
+      <input type="text" id="condition" placeholder="Condition" required />
+      <button type="submit">Add Patient</button>
+    </form>
+    
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <h2>Search for Patient</h2>
+      <input type="text" id="searchBar" placeholder="Search patients by name or condition" />
+    </div>
+
+    <!-- Patient Table -->
+    <h2>Patient List</h2>
+    <table id="patientTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Condition</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div id="pagination" class="pagination"></div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+        <h2> Patient Chart</h2>
+      <canvas id="patientChart"></canvas>
+    </div>
+  </div>
+
+  
+  <!-- Link to external JavaScript file -->
+  <script src="./script.js"></script>
+</body>
+</html>
